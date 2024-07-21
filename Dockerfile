@@ -27,6 +27,9 @@ ENV PORT=3000
 ENV DATABASE_URL=postgres://username:password@postgres_host:5432/dbname
 ENV REDIS_URL=redis://redis_host:6379
 
+# Compile TypeScript to JavaScript (if needed)
+RUN npm run build
+
 # Start the application
-CMD ["npm", "node dist/index.js"]
+CMD ["node", "dist/index.js"]
 USER node
