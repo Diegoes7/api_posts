@@ -28,5 +28,5 @@ ENV DATABASE_URL=postgres://username:password@postgres_host:5432/dbname
 ENV REDIS_URL=redis://redis_host:6379
 
 # Start the application
-CMD ["npm", "dist/index.js"]
+CMD ["npm", "node dist/index.js"]
 USER node
